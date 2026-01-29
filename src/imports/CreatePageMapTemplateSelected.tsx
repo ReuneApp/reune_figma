@@ -1,0 +1,593 @@
+import svgPaths from "./svg-jb7z5hciha";
+import imgImageWithFallback from "figma:asset/9844bfd977f4f5988b484778db92f0fb779ff0dc.png";
+
+function Container() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container1() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container2() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container />
+      <Container1 />
+    </div>
+  );
+}
+
+function Button() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container2 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container3() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[106px] top-[400px] w-[48px]" data-name="Container">
+      <Button />
+    </div>
+  );
+}
+
+function Container4() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container5() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container6() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container4 />
+      <Container5 />
+    </div>
+  );
+}
+
+function Button1() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container6 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container7() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[197px] size-[48px] top-[494px]" data-name="Container">
+      <Button1 />
+    </div>
+  );
+}
+
+function Close() {
+  return (
+    <div className="relative shrink-0 size-[34px]" data-name="close">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 34">
+        <g>
+          <path d={svgPaths.pc263700} fill="var(--fill-0, black)" id="icon" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button2() {
+  return (
+    <div className="absolute bg-white box-border content-stretch flex items-center justify-center left-[26px] pl-[3.691px] pr-[3.701px] py-[3.691px] rounded-[16px] size-[47.994px] top-[28px]" data-name="Button">
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" />
+      <Close />
+    </div>
+  );
+}
+
+function Container8() {
+  return <div className="absolute h-0 left-[511.98px] top-[47.99px] w-[15.995px]" data-name="Container" />;
+}
+
+function Container9() {
+  return <div className="absolute bg-[#e9e9e9] h-[60px] left-0 rounded-[2.06422e+07px] top-[18px] w-[300px]" data-name="Container" />;
+}
+
+function StyleOutlined() {
+  return (
+    <div className="absolute left-[22px] size-[35px] top-[13px]" data-name="Style=Outlined">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 35 35">
+        <g id="Style=Outlined" opacity="0.6">
+          <path d={svgPaths.p2a9dd3f0} fill="var(--fill-0, #100F0F)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Container10() {
+  return (
+    <div className="absolute bg-white border-8 border-[#e9e9e9] border-solid left-0 overflow-clip rounded-[20px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] size-[95.998px] top-0" data-name="Container">
+      <StyleOutlined />
+      <p className="absolute font-['Baloo_Tamma:Regular',sans-serif] inset-[calc(58.33%-8px)_calc(28.12%-8px)_calc(22.92%-8px)_calc(27.08%-8px)] leading-[normal] not-italic opacity-60 text-[#1e1e1e] text-[14px] text-center">CAFE</p>
+    </div>
+  );
+}
+
+function MoodHappy() {
+  return (
+    <div className="absolute left-[25px] size-[30px] top-[14px]" data-name="mood-happy">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 30 30">
+        <g id="mood-happy" opacity="0.6">
+          <g id="Vector"></g>
+          <path d={svgPaths.p2cb76e71} fill="var(--fill-0, #100F0F)" id="Vector_2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Container11() {
+  return (
+    <div className="absolute bg-white border-8 border-[#e9e9e9] border-solid left-[104px] overflow-clip rounded-[20px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] size-[95.998px] top-0" data-name="Container">
+      <MoodHappy />
+    </div>
+  );
+}
+
+function UtensilsCrossed() {
+  return (
+    <div className="absolute left-[26.01px] size-[27px] top-[13px]" data-name="utensils-crossed">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 27 27">
+        <g clipPath="url(#clip0_436_559)" id="utensils-crossed" opacity="0.6">
+          <path d={svgPaths.p96dfc80} id="Vector" stroke="var(--stroke-0, #100F0F)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" />
+        </g>
+        <defs>
+          <clipPath id="clip0_436_559">
+            <rect fill="white" height="27" width="27" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container12() {
+  return (
+    <div className="absolute bg-white border-8 border-[#e9e9e9] border-solid left-[207.99px] overflow-clip rounded-[20px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] size-[95.998px] top-0" data-name="Container">
+      <UtensilsCrossed />
+      <p className="absolute font-['Baloo_Tamma:Regular',sans-serif] inset-[calc(58.33%-8px)_calc(10.41%-8px)_calc(22.92%-8px)_calc(9.38%-8px)] leading-[normal] not-italic opacity-60 text-[#1e1e1e] text-[14px] text-center">FOOD</p>
+    </div>
+  );
+}
+
+function Container13() {
+  return (
+    <div className="absolute h-[96px] left-0 top-0 w-[304px]" data-name="Container">
+      <Container10 />
+      <Container11 />
+      <Container12 />
+      <p className="absolute font-['Baloo_Tamma:Regular',sans-serif] inset-[58.33%_34.21%_22.92%_33.55%] leading-[normal] not-italic opacity-60 text-[#1e1e1e] text-[14px] text-center">ACTIVITY</p>
+    </div>
+  );
+}
+
+function TemplateItem() {
+  return (
+    <div className="absolute inset-[13.08%_5.29%]" data-name="TEMPLATE ITEM 1">
+      <Container8 />
+      <Container9 />
+      <Container13 />
+    </div>
+  );
+}
+
+function Frame() {
+  return (
+    <div className="absolute h-[130px] left-0 top-0 w-[340px]">
+      <div className="absolute bg-white border-8 border-[#e9e9e9] border-solid inset-0 rounded-[30px]" />
+      <TemplateItem />
+    </div>
+  );
+}
+
+function MapStepBar3Steps() {
+  return (
+    <div className="absolute h-[130px] left-[27px] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.25)] top-[694px] w-[340px]" data-name="MAP STEP BAR - 3 STEPS">
+      <Frame />
+    </div>
+  );
+}
+
+function Container14() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container15() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container16() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container14 />
+      <Container15 />
+    </div>
+  );
+}
+
+function Button3() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container16 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container17() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[258px] top-[231px] w-[48px]" data-name="Container">
+      <Button3 />
+    </div>
+  );
+}
+
+function Container18() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container19() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container20() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container18 />
+      <Container19 />
+    </div>
+  );
+}
+
+function Button4() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container20 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container21() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[42px] top-[314px] w-[48px]" data-name="Container">
+      <Button4 />
+    </div>
+  );
+}
+
+function Container22() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container23() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container24() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container22 />
+      <Container23 />
+    </div>
+  );
+}
+
+function Button5() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container24 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container25() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[241px] top-[362px] w-[48px]" data-name="Container">
+      <Button5 />
+    </div>
+  );
+}
+
+function Container26() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container27() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container28() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container26 />
+      <Container27 />
+    </div>
+  );
+}
+
+function Button6() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container28 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container29() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[217px] top-[172px] w-[48px]" data-name="Container">
+      <Button6 />
+    </div>
+  );
+}
+
+function Container30() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container31() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container32() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container30 />
+      <Container31 />
+    </div>
+  );
+}
+
+function Button7() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container32 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container33() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[43px] top-[581px] w-[48px]" data-name="Container">
+      <Button7 />
+    </div>
+  );
+}
+
+function Container34() {
+  return <div className="absolute bg-white h-[15.995px] left-[4.3px] rounded-[2.06422e+07px] top-[8px] w-[31.999px]" data-name="Container" />;
+}
+
+function Container35() {
+  return <div className="absolute bg-[#90c24d] h-[13.534px] left-0 rounded-bl-[24px] rounded-br-[24px] top-[27.08px] w-[40.612px]" data-name="Container" />;
+}
+
+function Container36() {
+  return (
+    <div className="absolute bg-gradient-to-b from-[#a8d5f5] left-[3.69px] size-[40.612px] to-[#e8f4fc] top-[3.69px]" data-name="Container">
+      <Container34 />
+      <Container35 />
+    </div>
+  );
+}
+
+function Button8() {
+  return (
+    <div className="bg-white h-[48px] relative rounded-[16px] shrink-0 w-full" data-name="Button">
+      <div className="h-[48px] overflow-clip relative rounded-[inherit] w-full">
+        <Container36 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25),0px_4px_12px_0px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Container37() {
+  return (
+    <div className="absolute content-stretch flex flex-col items-start left-[364px] top-[553px] w-[48px]" data-name="Container">
+      <Button8 />
+    </div>
+  );
+}
+
+function Close1() {
+  return (
+    <div className="relative shrink-0 size-[34px]" data-name="close">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 34 34">
+        <g>
+          <path d={svgPaths.pc263700} fill="var(--fill-0, black)" id="icon" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button9() {
+  return (
+    <div className="absolute bg-white box-border content-stretch flex items-center justify-center left-[319px] pl-[3.691px] pr-[3.701px] py-[3.691px] rounded-[16px] size-[47.994px] top-[633px]" data-name="Button">
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" />
+      <Close1 />
+    </div>
+  );
+}
+
+function Markers() {
+  return (
+    <div className="absolute h-[852.649px] left-0 top-0 w-[393.719px]" data-name="Markers">
+      <Container3 />
+      <Container7 />
+      <Button2 />
+      <MapStepBar3Steps />
+      <Container17 />
+      <Container21 />
+      <Container25 />
+      <Container29 />
+      <Container33 />
+      <Container37 />
+      <Button9 />
+    </div>
+  );
+}
+
+function Icon() {
+  return (
+    <div className="relative shrink-0 size-[23.992px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
+        <g id="Icon">
+          <path d={svgPaths.p468a980} id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4992" />
+          <path d={svgPaths.p1cb43700} id="Vector_2" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4992" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button10() {
+  return (
+    <div className="absolute bg-white box-border content-stretch flex items-center justify-center left-0 pl-[3.691px] pr-[3.701px] py-[3.691px] rounded-[16px] size-[47.994px] top-0" data-name="Button">
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" />
+      <Icon />
+    </div>
+  );
+}
+
+function Camera() {
+  return (
+    <div className="relative shrink-0 size-[24px]" data-name="camera">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
+        <g id="camera">
+          <g id="Vector">
+            <path d={svgPaths.p27f53c00} stroke="var(--stroke-0, #100F0F)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" />
+            <path d={svgPaths.p16b88f0} stroke="var(--stroke-0, #100F0F)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button11() {
+  return (
+    <div className="absolute bg-white box-border content-stretch flex items-center justify-center left-0 pl-[3.691px] pr-[3.701px] py-[3.691px] rounded-[16px] size-[47.994px] top-[59.99px]" data-name="Button">
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" />
+      <Camera />
+    </div>
+  );
+}
+
+function ImageWithFallback() {
+  return (
+    <div className="h-[40.612px] relative shrink-0 w-full" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImageWithFallback} />
+    </div>
+  );
+}
+
+function Button12() {
+  return (
+    <div className="absolute bg-[rgba(255,255,255,0)] left-0 rounded-[16px] size-[47.994px] top-[-60px]" data-name="Button">
+      <div className="box-border content-stretch flex flex-col items-start overflow-clip p-[3.691px] relative rounded-[inherit] size-[47.994px]">
+        <ImageWithFallback />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Puzzle() {
+  return (
+    <div className="relative shrink-0 size-[22px]" data-name="puzzle">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 22 22">
+        <g clipPath="url(#clip0_436_569)" id="puzzle">
+          <path d={svgPaths.p574b270} id="Vector" stroke="var(--stroke-0, #100F0F)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        </g>
+        <defs>
+          <clipPath id="clip0_436_569">
+            <rect fill="white" height="22" width="22" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Templates() {
+  return (
+    <div className="absolute bg-white box-border content-stretch flex items-center justify-center left-0 pl-[3.691px] pr-[3.701px] py-[3.691px] rounded-[16px] size-[47.994px] top-[120px]" data-name="TEMPLATES">
+      <div aria-hidden="true" className="absolute border-[#e9e9e9] border-[3.691px] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]" />
+      <Puzzle />
+    </div>
+  );
+}
+
+function SideBar() {
+  return (
+    <div className="absolute h-[168px] left-[322px] top-[88px] w-[48px]" data-name="Side Bar">
+      <Button10 />
+      <Button11 />
+      <Button12 />
+      <Templates />
+    </div>
+  );
+}
+
+function Search() {
+  return (
+    <div className="bg-white h-[852.649px] overflow-clip relative shrink-0 w-full" data-name="Search">
+      <Markers />
+      <SideBar />
+    </div>
+  );
+}
+
+function Container38() {
+  return (
+    <div className="basis-0 grow min-h-px min-w-px relative shrink-0 w-[393.719px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid box-border content-stretch flex flex-col h-full items-start overflow-clip relative rounded-[inherit] w-[393.719px]">
+        <Search />
+      </div>
+    </div>
+  );
+}
+
+export default function CreatePageMapTemplateSelected() {
+  return (
+    <div className="bg-white content-stretch flex flex-col items-start relative size-full" data-name="Create Page (Map) - Template Selected">
+      <Container38 />
+    </div>
+  );
+}
