@@ -27,6 +27,7 @@ export default function Dev({ onBack }: DevProps) {
   const [longPressTimer, setLongPressTimer] = useState<NodeJS.Timeout | null>(null);
   const [usagePopup, setUsagePopup] = useState<{ name: string; position: { x: number; y: number } } | null>(null);
   const [selectedCoverIndex, setSelectedCoverIndex] = useState(0);
+  const noop = () => {};
 
   // Mock photos for cover photo picker
   const mockPhotos = [
@@ -547,7 +548,7 @@ export default function Dev({ onBack }: DevProps) {
           >
             <NotificationItem
               notification={mockNotification}
-              onClick={() => console.log('Notification clicked')}
+              onClick={noop}
               onClose={() => closePopup()}
             />
           </motion.div>
@@ -568,9 +569,9 @@ export default function Dev({ onBack }: DevProps) {
         onClose={closePopup}
         step={mockStep}
         isCreator={true}
-        onDeleteRoute={() => console.log('Delete route clicked')}
-        onViewLocation={() => console.log('View location clicked')}
-        onEditRoute={() => console.log('Edit route clicked')}
+        onDeleteRoute={noop}
+        onViewLocation={noop}
+        onEditRoute={noop}
       />
 
       {/* Step Settings Bottom Sheet */}
@@ -579,19 +580,16 @@ export default function Dev({ onBack }: DevProps) {
         onClose={closePopup}
         step={mockStep}
         stepNumber={1}
-        onDeleteStep={() => console.log('Delete step')}
-        onChangeCover={() => console.log('Change cover')}
-        onViewLocation={() => console.log('View location')}
+        onDeleteStep={noop}
+        onChangeCover={noop}
+        onViewLocation={noop}
       />
 
       {/* Delete Confirmation Popup */}
       <DeleteConfirmationPopup
         isOpen={activePopup === 'delete-confirmation'}
         onClose={closePopup}
-        onConfirm={() => {
-          console.log('Delete confirmed');
-          closePopup();
-        }}
+        onConfirm={() => closePopup()}
         routeTitle="COFFEE & ART TOUR"
       />
 
@@ -599,14 +597,8 @@ export default function Dev({ onBack }: DevProps) {
       <EditRoutePopup
         isOpen={activePopup === 'edit-route'}
         onClose={closePopup}
-        onEdit={() => {
-          console.log('Edit clicked');
-          closePopup();
-        }}
-        onDelete={() => {
-          console.log('Delete clicked');
-          closePopup();
-        }}
+        onEdit={() => closePopup()}
+        onDelete={() => closePopup()}
         routeImage={mockStep.image}
       />
 
@@ -614,14 +606,8 @@ export default function Dev({ onBack }: DevProps) {
       <SavedRouteActionsPopup
         isOpen={activePopup === 'saved-route-actions'}
         onClose={closePopup}
-        onShare={() => {
-          console.log('Share clicked');
-          closePopup();
-        }}
-        onRemove={() => {
-          console.log('Remove clicked');
-          closePopup();
-        }}
+        onShare={() => closePopup()}
+        onRemove={() => closePopup()}
         routeImage={mockStep.image}
       />
 
@@ -663,7 +649,6 @@ export default function Dev({ onBack }: DevProps) {
         selectedCoverIndex={selectedCoverIndex}
         onSelectCover={(index) => {
           setSelectedCoverIndex(index);
-          console.log('Selected cover photo index:', index);
         }}
       />
 

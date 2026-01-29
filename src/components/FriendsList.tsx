@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import svgPaths from '../imports/svg-pyrsfg4y3k';
 import svgPathsFriend from '../imports/svg-o5ll254qsh';
 import { mockUsers } from '../data/mockUsers';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import NotificationItem, { NotificationData } from './NotificationItem';
 import { motion } from 'framer-motion';
 
@@ -133,14 +133,11 @@ export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAc
 
   // Poll for status changes every 500ms
   useEffect(() => {
-    console.log('FriendsList: Polling effect started');
-    
     // Initialize previousStatuses on mount
     friends.forEach(friend => {
       const currentStatus = getFriendStatus(friend.id);
       if (!previousStatusesRef.current[friend.id]) {
         previousStatusesRef.current[friend.id] = currentStatus;
-        console.log('FriendsList: Initialized status for', friend.name, '=', currentStatus);
       }
     });
 
@@ -150,15 +147,8 @@ export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAc
         const currentStatus = getFriendStatus(friend.id);
         const previousStatus = previousStatusesRef.current[friend.id];
         
-        // Debug logging
-        if (currentStatus !== 'not-friend') {
-          console.log('FriendsList: Checking', friend.name, '| Previous:', previousStatus, '| Current:', currentStatus);
-        }
-        
         // If status changed from 'requested' to 'friend', show toast with avatar
         if (previousStatus === 'requested' && currentStatus === 'friend') {
-          console.log('🎉 FriendsList: Status changed for', friend.name, 'from requested to friend - SHOWING TOAST');
-          
           // Create notification data
           const notificationData: NotificationData = {
             id: `friend-accepted-${friend.id}`,
@@ -206,7 +196,6 @@ export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAc
     }, 500);
     
     return () => {
-      console.log('FriendsList: Polling effect cleaned up');
       clearInterval(interval);
     };
   }, [friends, getFriendStatus]);

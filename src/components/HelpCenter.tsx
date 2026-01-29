@@ -7,27 +7,22 @@ interface HelpCenterProps {
 export default function HelpCenter({ onBack }: HelpCenterProps) {
   const handleContactSupport = () => {
     // In a real app, this would open a contact form or email
-    console.log('Contact support');
   };
 
   const handleViewFAQ = () => {
     // In a real app, this would navigate to FAQ page
-    console.log('View FAQ');
   };
 
   const handleReportProblem = () => {
     // In a real app, this would open a problem report form
-    console.log('Report problem');
   };
 
   const handleTermsOfService = () => {
     // In a real app, this would open terms of service
-    console.log('Terms of service');
   };
 
   const handleCommunityGuidelines = () => {
     // In a real app, this would open community guidelines
-    console.log('Community guidelines');
   };
 
   return (

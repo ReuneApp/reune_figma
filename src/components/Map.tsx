@@ -16,7 +16,7 @@ import ShareBottomSheet from './ShareBottomSheet';
 import PlaceSelectionUI from './PlaceSelectionUI';
 import PlaceGalleryPopup from './PlaceGalleryPopup';
 import RouteSettingsBottomSheet from './RouteSettingsBottomSheet';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface MapProps {
   onBack?: () => void;
@@ -1043,7 +1043,6 @@ export default function Map({ onBack, onSearch, onViewProfile, onCapture, onNavi
           step={selectedRoute.steps[routeSettingsStepIndex]}
           isCreator={selectedRoute.creator.id === authUserData?.id}
           onDeleteRoute={() => {
-            console.log('Delete route requested');
             setRouteSettingsStepIndex(null);
             // TODO: Implement route deletion
           }}

@@ -120,14 +120,12 @@ All users have unique:
 ├── components/           # React components
 │   ├── About.tsx
 │   ├── AccountInformation.tsx
-│   ├── Capture.tsx       # Camera mode for route creation
 │   ├── Create.tsx        # Main route creation component
 │   ├── EditProfile.tsx
 │   ├── FriendsList.tsx
 │   ├── HomeFeed.tsx      # Vertical scrolling feed
 │   ├── Map.tsx           # Interactive map view
 │   ├── Notifications.tsx
-│   ├── Profile.tsx
 │   ├── Search.tsx
 │   ├── Settings.tsx
 │   ├── ui/               # shadcn/ui components
