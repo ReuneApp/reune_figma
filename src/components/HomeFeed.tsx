@@ -744,7 +744,6 @@ export default function HomeFeed({ onStartTracking, onOpenMap, onOpenSearch, onV
                 className={`w-[47.994px] h-[47.994px] rounded-[16px] bg-white flex items-center justify-center shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] flex-shrink-0 border-[3.691px] border-[#e9e9e9] ${currentRouteIsPrivate ? 'opacity-40 cursor-not-allowed' : 'active:scale-95 transition-transform'}`}
                 onClick={() => {
                   if (!currentRouteIsPrivate) {
-                    console.log('Share button clicked');
                     setIsShareSheetOpen(true);
                   }
                 }}

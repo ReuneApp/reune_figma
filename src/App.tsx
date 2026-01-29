@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Home, Map as MapIcon, Camera, Navigation, Loader } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Toaster } from 'sonner@2.0.3';
+import { Toaster } from 'sonner';
 import InviteCode from './components/InviteCode';
 import CreateProfile from './components/CreateProfile';
 import ViewPreferenceOverlay from './components/ViewPreferenceOverlay';
@@ -23,7 +23,6 @@ import TemplatesPage from './components/TemplatesPage';
 import Dev from './components/Dev';
 import Notifications from './components/Notifications';
 import { mockUsers } from './data/mockUsers';
-import { mockRouteData } from './data/mockRouteData';
 
 type Screen = 'home' | 'search' | 'map' | 'capture' | 'profile' | 'friends' | 'editProfile' | 'settings' | 'accountInfo' | 'privacySettings' | 'helpCenter' | 'about' | 'routeTracking' | 'templates' | 'dev' | 'notifications';
 
@@ -612,17 +611,6 @@ export default function App() {
     creatorRoutes: RouteData[];
   } | null>(null);
 
-  // Debug: Log when profileUserId changes
-  useEffect(() => {
-    console.log('===> profileUserId state changed to:', profileUserId);
-    console.log('===> isAuthUserProfile state:', isAuthUserProfile);
-    console.log('===> currentScreen:', currentScreen);
-    if (currentScreen === 'profile' && profileUserId) {
-      const user = mockUsers[profileUserId];
-      console.log('===> User data from mockUsers[' + profileUserId + ']:', user);
-    }
-  }, [profileUserId, isAuthUserProfile, currentScreen]);
-
   // Global timer to auto-accept friend requests after 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -837,7 +825,6 @@ export default function App() {
     }
 
     if (!routeToEdit) {
-      console.error('Route not found:', routeId);
       return;
     }
 
@@ -941,8 +928,6 @@ export default function App() {
   };
 
   const navigateTo = (screen: Screen, state?: Partial<NavigationState>) => {
-    console.log('📍 navigateTo called:', screen, 'state:', JSON.stringify(state, null, 2));
-    
     // Save current state to stack
     const currentState: NavigationState = {
       screen: currentScreen,
@@ -958,7 +943,6 @@ export default function App() {
     // Navigate to new screen
     setCurrentScreen(screen);
     if (state?.profileUserId !== undefined) {
-      console.log('📍 Setting profileUserId to:', state.profileUserId);
       setProfileUserId(state.profileUserId);
     }
     if (state?.isAuthUserProfile !== undefined) setIsAuthUserProfile(state.isAuthUserProfile);
@@ -1207,21 +1191,18 @@ export default function App() {
   // Auth handlers
   const handleEmailAuth = () => {
     // TODO: Implement email authentication
-    console.log('Email auth clicked');
     setIsAuthenticated(true);
     setLoginMethod('email');
   };
 
   const handleGoogleAuth = () => {
     // TODO: Implement Google authentication
-    console.log('Google auth clicked');
     setIsAuthenticated(true);
     setLoginMethod('google');
   };
 
   const handleAppleAuth = () => {
     // TODO: Implement Apple authentication
-    console.log('Apple auth clicked');
     setIsAuthenticated(true);
     setLoginMethod('apple');
   };
@@ -1636,19 +1617,15 @@ export default function App() {
             onBack={navigateBack}
             onEmailUs={() => {
               // Handle email us - could open email client
-              console.log('Email us clicked');
             }}
             onTermsConditions={() => {
               // Handle terms & conditions
-              console.log('Terms & Conditions clicked');
             }}
             onPrivacyPolicy={() => {
               // Handle privacy policy
-              console.log('Privacy Policy clicked');
             }}
             onDeleteAccount={() => {
               // Handle delete account
-              console.log('Delete account clicked');
             }}
           />
         );

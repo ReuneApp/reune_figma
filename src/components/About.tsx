@@ -5,9 +5,8 @@ interface AboutProps {
 }
 
 export default function About({ onBack }: AboutProps) {
-  const handleSocialLink = (platform: string) => {
+  const handleSocialLink = (_platform: string) => {
     // In a real app, this would open the social media link
-    console.log(`Open ${platform}`);
   };
 
   return (

@@ -210,13 +210,7 @@ export default function UserProfile({ userId, isAuthUser = false, authUserData, 
   const [isShareSheetOpen, setIsShareSheetOpen] = useState(false);
   
   const user = getUserById(userId);
-  
-  console.log('🔴 UserProfile Debug:');
-  console.log('  userId:', userId);
-  console.log('  isAuthUser:', isAuthUser);
-  console.log('  userData:', userData);
-  console.log('  authUserData:', authUserData);
-  
+
   // Extract first names only for display
   const getFirstName = (fullName: string) => fullName.split(' ')[0];
   
@@ -233,10 +227,6 @@ export default function UserProfile({ userId, isAuthUser = false, authUserData, 
   const displayBio = isAuthUser 
     ? (authUserData?.bio || '')
     : (userData?.bio || '');
-  
-  console.log('  Calculated displayName:', displayName);
-  console.log('  Calculated displayAvatar:', displayAvatar);
-  console.log('  Calculated displayLocation:', displayLocation);
 
   // Calculate dynamic positioning based on bio
   const hasBio = displayBio && displayBio.trim().length > 0;

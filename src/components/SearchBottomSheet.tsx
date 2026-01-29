@@ -58,7 +58,7 @@ export default function SearchBottomSheet({ isOpen, onClose }: SearchBottomSheet
     : [];
 
   const handleSearchSubmit = (query: string) => {
-    console.log('Search submitted:', query);
+    void query;
   };
 
   const handleClose = () => {

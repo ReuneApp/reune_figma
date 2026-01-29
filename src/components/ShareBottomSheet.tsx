@@ -60,7 +60,7 @@ export default function ShareBottomSheet({ isOpen, onClose, routeId, routeTitle 
       await navigator.clipboard.writeText(shareLink);
       setCopiedLink(true);
       setTimeout(() => setCopiedLink(false), 2000);
-    } catch (err) {
+    } catch {
       // Fallback to older method if Clipboard API is blocked
       try {
         const textArea = document.createElement('textarea');
@@ -78,11 +78,8 @@ export default function ShareBottomSheet({ isOpen, onClose, routeId, routeTitle 
         if (successful) {
           setCopiedLink(true);
           setTimeout(() => setCopiedLink(false), 2000);
-        } else {
-          console.error('Failed to copy link using fallback method');
         }
-      } catch (fallbackErr) {
-        console.error('Failed to copy link:', err, fallbackErr);
+      } catch {
       }
     }
   };

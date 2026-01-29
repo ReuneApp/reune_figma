@@ -79,8 +79,6 @@ export default function Notifications({ onBack }: NotificationsProps) {
   const [notifications, setNotifications] = useState<NotificationData[]>(mockNotifications);
 
   const handleNotificationClick = (notification: NotificationData) => {
-    console.log('Notification clicked:', notification);
-    
     // If it's a friend request, accept it and show toast
     if (notification.type === 'friend_request') {
       // Extract the name from the message (e.g., "Sarah Johnson sent you a friend request")

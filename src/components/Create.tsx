@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { X, Music, Trash2, Images, Hand, Plus, MapPin, Image as ImageIcon, Camera, ArrowLeft, ChevronLeft, ChevronRight, Search, Lock, CameraOff, TriangleAlert, Aperture, Pencil, ArrowUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogPortal, AlertDialogOverlay } from './ui/alert-dialog';
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog@1.1.6';
+import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import StepBar from './StepBar';
 import StepSettingsBottomSheet from './StepSettingsBottomSheet';
