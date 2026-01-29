@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import svgPaths from '../imports/svg-pyrsfg4y3k';
 import svgPathsFriend from '../imports/svg-o5ll254qsh';
 import { mockUsers } from '../data/mockUsers';
-import { toast } from 'sonner';
+import { toast } from 'sonner@2.0.3';
 import NotificationItem, { NotificationData } from './NotificationItem';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 type FriendState = 'add' | 'added';
 
@@ -101,9 +101,10 @@ interface FriendsListProps {
   onAcceptFriendRequest: (userId: string) => void;
   onRejectFriendRequest: (userId: string) => void;
   onViewUserProfile: (userId: string) => void;
+  isViewingOwnFriends?: boolean;
 }
 
-export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAcceptFriendRequest, onRejectFriendRequest, onViewUserProfile }: FriendsListProps) {
+export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAcceptFriendRequest, onRejectFriendRequest, onViewUserProfile, isViewingOwnFriends = false }: FriendsListProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [friends, setFriends] = useState<Friend[]>(allUsers);
   const [addedFriends, setAddedFriends] = useState<string[]>([]);
@@ -133,11 +134,14 @@ export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAc
 
   // Poll for status changes every 500ms
   useEffect(() => {
+    console.log('FriendsList: Polling effect started');
+    
     // Initialize previousStatuses on mount
     friends.forEach(friend => {
       const currentStatus = getFriendStatus(friend.id);
       if (!previousStatusesRef.current[friend.id]) {
         previousStatusesRef.current[friend.id] = currentStatus;
+        console.log('FriendsList: Initialized status for', friend.name, '=', currentStatus);
       }
     });
 
@@ -147,8 +151,15 @@ export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAc
         const currentStatus = getFriendStatus(friend.id);
         const previousStatus = previousStatusesRef.current[friend.id];
         
+        // Debug logging
+        if (currentStatus !== 'not-friend') {
+          console.log('FriendsList: Checking', friend.name, '| Previous:', previousStatus, '| Current:', currentStatus);
+        }
+        
         // If status changed from 'requested' to 'friend', show toast with avatar
         if (previousStatus === 'requested' && currentStatus === 'friend') {
+          console.log('🎉 FriendsList: Status changed for', friend.name, 'from requested to friend - SHOWING TOAST');
+          
           // Create notification data
           const notificationData: NotificationData = {
             id: `friend-accepted-${friend.id}`,
@@ -196,6 +207,7 @@ export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAc
     }, 500);
     
     return () => {
+      console.log('FriendsList: Polling effect cleaned up');
       clearInterval(interval);
     };
   }, [friends, getFriendStatus]);
@@ -341,27 +353,31 @@ export default function FriendsList({ onBack, onAddFriend, getFriendStatus, onAc
                     FRIENDS
                   </p>
                 </button>
-                <button
-                  onClick={() => setActiveFilter('suggested')}
-                  className="box-border content-stretch flex h-[48px] items-center justify-center px-[20px] py-[10px] rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25)] relative gap-[8px] active:scale-95 transition-all duration-200 bg-white flex-shrink-0"
-                >
-                  <div aria-hidden="true" className="absolute border-4 border-[#e9e9e9] border-solid inset-0 pointer-events-none rounded-[16px]" />
-                  <p className="font-['Baloo_Tamma',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-nowrap whitespace-pre uppercase text-center" style={{ color: activeFilter === 'suggested' ? '#1e1e1e' : 'rgba(30,30,30,0.4)' }}>
-                    SUGGESTED
-                  </p>
-                </button>
-                <button
-                  onClick={() => hasRequested && setActiveFilter('requested')}
-                  disabled={!hasRequested}
-                  className={`box-border content-stretch flex h-[48px] items-center justify-center px-[20px] py-[10px] rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25)] relative gap-[8px] transition-all duration-200 bg-white flex-shrink-0 ${
-                    hasRequested ? 'active:scale-95' : 'cursor-not-allowed'
-                  }`}
-                >
-                  <div aria-hidden="true" className="absolute border-4 border-[#e9e9e9] border-solid inset-0 pointer-events-none rounded-[16px]" />
-                  <p className="font-['Baloo_Tamma',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-nowrap whitespace-pre uppercase text-center" style={{ color: hasRequested ? (activeFilter === 'requested' ? '#1e1e1e' : 'rgba(30,30,30,0.4)') : 'rgba(30,30,30,0.2)' }}>
-                    REQUESTS
-                  </p>
-                </button>
+                {isViewingOwnFriends && (
+                  <>
+                    <button
+                      onClick={() => setActiveFilter('suggested')}
+                      className="box-border content-stretch flex h-[48px] items-center justify-center px-[20px] py-[10px] rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25)] relative gap-[8px] active:scale-95 transition-all duration-200 bg-white flex-shrink-0"
+                    >
+                      <div aria-hidden="true" className="absolute border-4 border-[#e9e9e9] border-solid inset-0 pointer-events-none rounded-[16px]" />
+                      <p className="font-['Baloo_Tamma',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-nowrap whitespace-pre uppercase text-center" style={{ color: activeFilter === 'suggested' ? '#1e1e1e' : 'rgba(30,30,30,0.4)' }}>
+                        SUGGESTED
+                      </p>
+                    </button>
+                    <button
+                      onClick={() => hasRequested && setActiveFilter('requested')}
+                      disabled={!hasRequested}
+                      className={`box-border content-stretch flex h-[48px] items-center justify-center px-[20px] py-[10px] rounded-[16px] shadow-[0px_3px_15px_0px_rgba(0,0,0,0.25)] relative gap-[8px] transition-all duration-200 bg-white flex-shrink-0 ${
+                        hasRequested ? 'active:scale-95' : 'cursor-not-allowed'
+                      }`}
+                    >
+                      <div aria-hidden="true" className="absolute border-4 border-[#e9e9e9] border-solid inset-0 pointer-events-none rounded-[16px]" />
+                      <p className="font-['Baloo_Tamma',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-nowrap whitespace-pre uppercase text-center" style={{ color: hasRequested ? (activeFilter === 'requested' ? '#1e1e1e' : 'rgba(30,30,30,0.4)') : 'rgba(30,30,30,0.2)' }}>
+                        REQUESTS
+                      </p>
+                    </button>
+                  </>
+                )}
               </div>
             </div>
 
